@@ -83,4 +83,4 @@ function goNavigate(currentNode, instruction, stepCount, dataArray, rule) {
   }
 }
 
-start('./input.txt', '', '')
+start('./input.txt', '', 'array')
