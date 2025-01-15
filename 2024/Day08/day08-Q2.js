@@ -1,7 +1,7 @@
 const fileReader = require('../../utils/fileReader')
 
 async function start() {
-  const fl = await fileReader('./test_input.txt')
+  const fl = await fileReader('./input.txt')
   const matrix = []
   let width = 0
   let height = 0
@@ -33,19 +33,25 @@ async function start() {
   for (const symbol in sameSymbol) {
     for (let i = 0; i < sameSymbol[symbol].length; i++) {
       const [x1, y1] = sameSymbol[symbol][i]
+      coordinates.add(x1.toString() + ',' + y1.toString())
       for (let j = i + 1; j < sameSymbol[symbol].length; j++) {
         const [x2, y2] = sameSymbol[symbol][j]
+        let [newX1, newY1, newX2, newY2] = [x1, y1, x2, y2]
+        coordinates.add(x2.toString() + ',' + y2.toString())
         const distance = [x1 - x2, y1 - y2]
         console.log(symbol, x1, y1, x2, y2, distance)
-        if ((x1 + distance[0] >= 0 && x1 + distance[0] < width && y1 + distance[1] >= 0 && y1 + distance[1] < height)
+        while ((newX1 + distance[0] >= 0 && newX1 + distance[0] < width && newY1 + distance[1] >= 0 && newY1 + distance[1] < height)
         ) {
-          console.log('Sum1:', [x1 + distance[0], y1 + distance[1]])
-          coordinates.add((x1 + distance[0]).toString() + ',' + (y1 + distance[1]).toString())
+          console.log('Sum1:', [newX1 + distance[0], newY1 + distance[1]])
+          coordinates.add((newX1 + distance[0]).toString() + ',' + (newY1 + distance[1]).toString())
+          newX1 = newX1 + distance[0]
+          newY1 = newY1 + distance[1]
         }
-        if ((x2 - distance[0] >= 0 && x2 - distance[0] < width && y2 - distance[1] >= 0 && y2 - distance[1] < height)) {
-          console.log('Sum2:', [x2 - distance[0], y2 - distance[1]])
-          coordinates.add((x2 - distance[0]).toString() + ',' + (y2 - distance[1]).toString())
-
+        while ((newX2 - distance[0] >= 0 && newX2 - distance[0] < width && newY2 - distance[1] >= 0 && newY2 - distance[1] < height)) {
+          console.log('Sum2:', [newX2 - distance[0], newY2 - distance[1]])
+          coordinates.add((newX2 - distance[0]).toString() + ',' + (newY2 - distance[1]).toString())
+          newX2 = newX2 - distance[0]
+          newY2 = newY2 - distance[1]
         }
       }
     }
