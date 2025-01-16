@@ -1,0 +1,59 @@
+Current file: 9 PointerBack: 41
+ . FILE FOUND!! 9
+ . File count: 2
+ .  Space count: 1
+FIND ENOUGH SPACE 3 2
+Current file: 8 PointerBack: 39
+ . FILE FOUND!! 8
+ . File count: 4
+ .  Space count: 3
+Current file: 7 PointerBack: 35
+ . PointerBack: 35 .
+ . FILE FOUND!! 7
+ . File count: 3
+ .  Space count: 2
+FIND ENOUGH SPACE 10 3
+Current file: 6 PointerBack: 31
+ . PointerBack: 31 .
+ . FILE FOUND!! 6
+ . File count: 4
+ .  Space count: 3
+Current file: 5 PointerBack: 26
+ . PointerBack: 26 .
+ . FILE FOUND!! 5
+ . File count: 4
+ .  Space count: 3
+Current file: 4 PointerBack: 21
+ . PointerBack: 21 .
+ . FILE FOUND!! 4
+ . File count: 2
+ .  Space count: 1
+FIND ENOUGH SPACE 13 2
+Current file: 3 PointerBack: 18
+ . PointerBack: 18 .
+ . FILE FOUND!! 3
+ . File count: 3
+ .  Space count: 1
+Current file: 2 PointerBack: 14
+ . PointerBack: 14 .
+ . PointerBack: 13 4
+ . PointerBack: 12 4
+ . FILE FOUND!! 2
+ . File count: 1
+ .  Space count: 0
+FIND ENOUGH SPACE 4 1
+Current file: 1 PointerBack: 10
+ . PointerBack: 10 7
+ . PointerBack: 9 7
+ . PointerBack: 8 7
+ . FILE FOUND!! 1
+ . File count: 3
+ .  Space count: 0
+Final answer: [
+  '0', '0', '9', '9', '2', '1', '1',
+  '1', '7', '7', '7', '.', '4', '4',
+  '.', '3', '3', '3', '.', '.', '.',
+  '.', '5', '5', '5', '5', '.', '6',
+  '6', '6', '6', '.', '.', '.', '.',
+  '.', '8', '8', '8', '8', '.', '.'
+] 2858
